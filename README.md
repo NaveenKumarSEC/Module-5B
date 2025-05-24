@@ -14,20 +14,19 @@ To write a **NumPy** program that sorts the elements in each column of a given 2
 ## 🧾 Program
 ```
 import numpy as np
-arr=np.array(eval(input()))
-print("Given array")
-print(arr)
-print()
-print(np.sort(arr,axis=0))
+x=np.array(eval(input()))
+sorted=np.sort(x,axis=1)
+print("Given array ")
+print("",x,"\n")
+print(sorted)
 ```
-
 ## Output
-![mod5b-1](https://github.com/user-attachments/assets/63dfd086-76fc-4664-af62-98938985f081)
+![439322848-fe2b0019-a533-4b1d-8e6b-1465ca52b498](https://github.com/user-attachments/assets/d518402f-70b2-4907-b1df-af058ccbc6a6)
 
 ## Result
-Thus the program that sorts the elements in each column of a given 2D array in ascending order is executed successfully.
+Thus,the program has been executed successfully.
 
-#  NumPy Program: Find Indices Where Elements in Array x are Greater Than or Equal to Corresponding Elements in Array y
+# # NumPy Program: Find Indices Where Elements in Array x are Greater Than or Equal to Corresponding Elements in Array y
 
 ## 🎯 Aim
 To write a Python program using **NumPy** that finds the indices where elements in array `x` are greater than or equal to their corresponding elements in array `y`.
@@ -44,23 +43,20 @@ To write a Python program using **NumPy** that finds the indices where elements 
 ## 🧾 Program
 ```
 import numpy as np
-
 x=np.array(eval(input()))
 y=np.array(eval(input()))
-gt=np.where(x>y)
-eq=np.where(x==y)
-print(gt)
-print(eq)
+great=np.where(x>y)
+equal=np.where(x==y)
+print(great)
+print(equal)
 ```
-
 ## Output
-![mod5b-2](https://github.com/user-attachments/assets/ad03e9fc-8a44-48ce-bffc-2a9ed6db4354)
+![439325031-4c26dcc1-9990-4dd1-866f-dc1c6f347217](https://github.com/user-attachments/assets/2c81c85e-e2c6-4e0c-b37b-bfcffde8f2cf)
 
 ## Result
-Thus the program that finds the indices where elements in array x are greater than or equal to their corresponding elements in array y is executed successfully.
+Thus,the program has been executed successfully.
 
 # NumPy Program: Replace the Second Column in a 2D Array
-
 
 ## 🎯 Aim
 To write a **NumPy** program that deletes the second column from a given 2D array and inserts a new column at the same position.
@@ -75,24 +71,22 @@ To write a **NumPy** program that deletes the second column from a given 2D arra
 ## 🧾 Program
 ```
 import numpy as np
-
-a=np.array(eval(input()))
-b=np.array(eval(input()))
+orig=np.array(eval(input()))
+new=np.array(eval(input()))
 print("Printing Original array")
-print(a)
+print(orig)
+modif=np.delete(orig,1,axis=1)
 print("Array after deleting column 2 on axis 1")
-c=np.delete(a,1,axis=1)
-print(c)
+print(modif)
+result=np.insert(modif,1,new,axis=1)
 print("Array after inserting column 2 on axis 1")
-print(np.insert(c,1,b,axis=1))
+print(result)
 ```
-
 ## Output
-![mod5b-3](https://github.com/user-attachments/assets/7aef15ce-4980-460e-8213-dbdb50e45711)
+![439326579-56ee6af8-835c-4881-9f98-3188cd2ed32e](https://github.com/user-attachments/assets/1cb64e91-54ad-44c6-87cd-cf91d07e5c8a)
 
 ## Result
-Thus the program that deletes the second column from a given 2D array and inserts a new column at the same position is executed successfully.
-
+Thus,the program has been executed successfully.
 
 # Pandas Program: Create and Display a DataFrame with Custom Index Labels
 
@@ -100,6 +94,7 @@ Thus the program that deletes the second column from a given 2D array and insert
 
 To create and display a **DataFrame** using the **Pandas** library in Python from a given dictionary, and apply specific index labels to the rows.
 
+---
 
 ## 🧠 Algorithm
 
@@ -109,28 +104,26 @@ To create and display a **DataFrame** using the **Pandas** library in Python fro
 4. **Create DataFrame**: Use `pd.DataFrame()` to create the DataFrame by passing the dictionary and index labels.
 5. **Display Output**: Display the DataFrame using `print()` or by simply calling the DataFrame variable.
 
+---
 
 ## 💻 Program
 ```
 import pandas as pd 
-import numpy as np
-
-exam_data  = {'name': ['Anastasia', 'Dima', 'Katherine', 'James', 'Emily', 'Michael', 'Matthew', 'Laura', 'Kevin','Jonas'], 
+import numpy as np 
+exam_data  = {'name': ['Anastasia', 'Dima', 'Katherine', 'James', 'Emily', 'Michael', 'Matthew', 'Laura', 
+'Kevin', 'Jonas'], 
 'score': [12.5, 9, 16.5, np.nan, 9, 20, 14.5, np.nan, 8, 19], 
 'attempts': [1, 3, 2, 3, 2, 3, 1, 1, 2, 1], 
-'qualify': ['yes', 'no', 'yes', 'no', 'no', 'yes', 'yes', 'no', 'no', 'yes']}
-
-label=['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'] 
-df = pd.DataFrame(exam_data , index=label) 
+'qualify': ['yes', 'no', 'yes', 'no', 'no', 'yes', 'yes', 'no', 'no', 'yes']} 
+labels = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'] 
+df = pd.DataFrame(exam_data , index=labels) 
 print(df)
 ```
-
 ## Output
-![mod5b-4](https://github.com/user-attachments/assets/ff6beaf9-e9a8-4476-a1b8-29898738f6f5)
+![439328149-054400e3-afff-4bf2-8968-e0a321f146a8](https://github.com/user-attachments/assets/b2a7c1b9-1f95-44be-8d1b-bae712a90fc0)
 
 ## Result
-Thus the program to create and display a DataFrame using the Pandas library in Python from a given dictionary, and apply specific index labels to the rows is executed successfully.
-
+Thus,the program has been executed successfully.
 
 # 🧪 Pandas Program: Join Two DataFrames Along Rows
 
@@ -166,10 +159,8 @@ mer=pd.concat([df1,df2])
 print("Join the said two dataframes along rows:")
 print(mer)
 ```
-
 ## Output
-![Screenshot (153)](https://github.com/user-attachments/assets/26df033a-9708-4c01-8739-4d60e35497e9)
+![439329798-26df033a-9708-4c01-8739-4d60e35497e9](https://github.com/user-attachments/assets/b324cfb7-bcd6-4479-8a3f-2e5bd9d44bc8)
 
 ## Result
 Thus,the program has been executed successfully.
-
